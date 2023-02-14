@@ -6,11 +6,11 @@ For this lab you will be building the control units for a MIPS processor. See th
 
 ![FIGURE 4.17  The simple datapath with the control unit.](./assets/fig-4.17.png)
 
-There are two control units. The​ main control unit​ manages the datapath. It receives an opcode
+There are two control units. The _main control unit_ manages the datapath. It receives an opcode
 input from the currently executing instructions and based on this opcode it configures the
 datapath accordingly. A truth table for the unit functionality (shown below) can be found in the
-slides of CS161. The table (read vertically) shows the output for ​R-format, lw, sw ​and
-beq​ instructions, additionally, you will need to implement the immediate type (​addi,subi​)
+slides of CS161. The table (read vertically) shows the output for `R-format`, `lw`, `sw` and
+`beq` instructions, additionally, you will need to implement the immediate type (`addi`,`subi`)
 instructions. To do this, you will trace through the datapath (shown above) to determine which
 control lines will need to be set.
 
@@ -150,12 +150,12 @@ control lines will need to be set.
     </tbody>
 </table>
 
-**Table 1.** ​The control function for the simple one-clock implementation. Read each column
-vertically. I.e. if the ​Op[5:0]​ is ​000000​, the ​RegDst​ would be ‘​1​’, ​ALUSrc​ would be ‘​0​’, etc.
-You will need to fill in the ​imm​ column. Based on Figure D.2.4 from the book.
+**Table 1.** The control function for the simple one-clock implementation. Read each column
+vertically. I.e. if the `Op[5:0]` is `000000`, the `RegDst` would be ‘`1`’, `ALUSrc` would be ‘`0`’, etc.
+You will need to fill in the `imm` column. Based on Figure D.2.4 from the book.
 
-The second control unit manages the ​ALU​. It receives an ALU opcode from the datapath
-controller and the ‘​Funct Field​’ from the current instruction. With these, the ALU controller
+The second control unit manages the _ALU_. It receives an ALU opcode from the datapath
+controller and the ‘`Funct Field`’ from the current instruction. With these, the ALU controller
 decides what operation the ALU is to perform. The following figures from the CS161 slides give
 an idea of the inputs and outputs of the ALU controller.
 
@@ -217,7 +217,7 @@ an idea of the inputs and outputs of the ALU controller.
             <td style="width: 16.6558%; text-align: right;">R-type</td>
             <td style="width: 16.6543%; text-align: center;"><span style="font-family: 'andale mono', times;">10</span></td>
             <td style="width: 16.6558%;">AND</td>
-            <td style="width: 16.6543%; text-align: center;"><span style="font-family: 'andale mono', times;">10010</span></td>
+            <td style="width: 16.6543%; text-align: center;"><span style="font-family: 'andale mono', times;">100100</span></td>
             <td style="width: 16.6558%;">and</td>
             <td style="width: 16.6543%; text-align: center;"><span style="font-family: 'andale mono', times;">0000</span></td>
         </tr>
@@ -375,24 +375,24 @@ tests, which the TA and I will grade.
 ## Deliverables
 
 For this lab, you are expected to build and test both the datapath using the template provided
-([`​controlUnit.v`](./controlUnit.v)​) and ALU control ([`​aluControlUnit.v`](./aluControlUnit.v)​) units. The target processor
+([`controlUnit.v`](./controlUnit.v)) and ALU control ([`aluControlUnit.v`](./aluControlUnit.v)) units. The target processor
 architecture will only support a subset of the MIPS instructions, listed below. You only have to
 offer control for these instructions. Signal values can be found within your textbook (and in the
 images above).
 
-- add, addu, addi
-- sub, subu
-- slt
-- not*, nor
-- or
-- and
-- lw, sw
-- beq
+- `add`, `addu`, `addi`
+- `sub`, `subu`
+- `slt`
+- `not`*, `nor`
+- `or`
+- `and`
+- `lw`, `sw`
+- `beq`
 
-Notice that for the ​`addu`​ it is sufficient to generate the same control signals as the ​`add`
+Notice that for the `addu` it is sufficient to generate the same control signals as the `add`
 operation.
 
-\* `​not`​ is ​not​ an instruction, it is a ​pseudo-op​, which means it can be implemented using other
+\* `not` is **not** an instruction, it is a _pseudo-op_, which means it can be implemented using other
 operations. Think about how you would implement it using the other operations.
 
 ### Architecture Case Study
@@ -400,7 +400,7 @@ operations. Think about how you would implement it using the other operations.
 For the lab this week you are also expected to perform a simple case study. It is meant to show
 how important understanding a computer's architecture is, and the compiler is when developing
 efficient code. For this study, you are to compare and analyze the execution time of the two
-programs given [​here](./case_study.tar.gz)​. You should run a number of experiments varying the input size from 100
+programs given [here](./case_study.tar.gz). You should run a number of experiments varying the input size from 100
 to 30,000. Based on the results you are to write a report of your findings. The report should
 contain a graph of your data and a useful analysis of it. You should draw conclusions based on
 your findings. Reports that simply restate what is in the graph will not get credit. To make it
@@ -429,7 +429,7 @@ waveform shows the no more ripples caused the delay.
 
 ## Submission:
 
-Each student **​must**​ turn in their repository from GitHub to Gradescope. The contents of which should be:
+Each student **must** turn in their repository from GitHub to Gradescope. The contents of which should be:
 - A REPORT.md file with your name and email address, and the content described above
 - All Verilog file(s) used in this lab (implementation and test benches).
 
