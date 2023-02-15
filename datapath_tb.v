@@ -12,6 +12,15 @@ module datapath_tb;
     reg [8:0] R;
     reg [3:0] R_alu;
 
+    // -------------------------------------------------------
+    // Setup output file for possible debugging uses
+    // -------------------------------------------------------
+    initial
+    begin
+        $dumpfile("lab04.vcd");
+        $dumpvars(0);
+    end
+    
     // ---------------------------------------------------
     // Instantiate the Units Under Test (UUT)
     // --------------------------------------------------- 

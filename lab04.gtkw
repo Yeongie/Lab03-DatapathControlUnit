@@ -1,0 +1,30 @@
+[*]
+[*] GTKWave Analyzer v3.3.104 (w)1999-2020 BSI
+[*] Wed Feb 15 20:03:31 2023
+[*]
+[dumpfile] "/home/allan/cs161L/Github-Labs/from_templates/Lab04-DatapathControlUnits/lab04.vcd"
+[dumpfile_mtime] "Wed Feb 15 20:01:05 2023"
+[dumpfile_size] 5005
+[savefile] "/home/allan/cs161L/Github-Labs/from_templates/Lab04-DatapathControlUnits/lab04.gtkw"
+[timestart] 0
+[size] 1822 1142
+[pos] 1473 501
+*-18.385017 2 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+[treeopen] datapath_tb.
+[sst_width] 233
+[signals_width] 350
+[sst_expanded] 1
+[sst_vpaned_height] 332
+@28
+datapath_tb.clk
+@22
+datapath_tb.instr_op[5:0]
+datapath_tb.R[8:0]
+datapath_tb.result[8:0]
+@23
+datapath_tb.instr_field[5:0]
+@22
+datapath_tb.R_alu[3:0]
+datapath_tb.alu_result[3:0]
+[pattern_trace] 1
+[pattern_trace] 0
