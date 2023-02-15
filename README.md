@@ -410,12 +410,10 @@ get low or no marks. The report should be a part of REPORT.md.
 
 ### Producing the Waveform
 
-Once you've synthesized the code for the test-bench and the Ripple Carry Adder module, you can run
+Once you've synthesized the code for the test-bench and the `aluControlUnit` and `controlUnit` modules, you can run
 the test-bench simulation script to make sure all the tests pass. This simluation run should
-produce the code to make a waveform. Use techniques you learned in the previous lab to produce a
-waveform for this lab and save it as a PNG. You will use this waveform in the lab write up and you
-should look at it to see no ripple this time, but rather that the addition is complete after one 
-propagation delay, no matter what the size of the adder.
+produce the code to make a waveform. Use techniques you learned in the first lab to produce a
+waveform for this lab and save it as a PNG. 
 
 You don't need to add a marker this time. Also, I've provided a .gtkw.
 
@@ -424,8 +422,7 @@ You don't need to add a marker this time. Also, I've provided a .gtkw.
 Finally, create a file called REPORT.md and use GitHub markdown to write your lab report. This lab
 report will again be short, and comprised of two sections. The first section is a description of 
 each test case. Use this section to discuss what changes you made in your tests from the prelab
-until this final report. The second section should include your waveform and discuss how this 
-waveform shows the no more ripples caused the delay. 
+until this final report. The second section should include your waveform. 
 
 ## Submission:
 
