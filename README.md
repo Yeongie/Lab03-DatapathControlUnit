@@ -225,7 +225,7 @@ an idea of the inputs and outputs of the ALU controller.
             <td style="width: 16.6558%; text-align: right;">R-type</td>
             <td style="width: 16.6543%; text-align: center;"><span style="font-family: 'andale mono', times;">10</span></td>
             <td style="width: 16.6558%;">OR</td>
-            <td style="width: 16.6543%; text-align: center;"><span style="font-family: 'andale mono', times;">100100</span></td>
+            <td style="width: 16.6543%; text-align: center;"><span style="font-family: 'andale mono', times;">100101</span></td>
             <td style="width: 16.6558%;">or</td>
             <td style="width: 16.6543%; text-align: center;"><span style="font-family: 'andale mono', times;">0001</span></td>
         </tr>
