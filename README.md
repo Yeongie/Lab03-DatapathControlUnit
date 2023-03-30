@@ -1,4 +1,4 @@
-# Lab 4 - The Datapath Control and ALU Control Units 
+# Lab 2 - The Datapath Control and ALU Control Units 
 
 ## Introduction
 
