@@ -360,18 +360,6 @@ an idea of the inputs and outputs of the ALU controller.
 </table>
 <center><b>Truth Table for ALU Control</b></center>
 
-## Prelab
-
-You will need to submit your testbench on ilearn prior to coming to lab (check online for due
-dates). Your testbench should demonstrate that you have read through the lab specifications
-and understand the goal of this lab. You will need to consider the boundary cases. You do not
-need to begin designing yet, but this testbench will be helpful during the lab while you are
-designing.
-
-You will submit the entire lab repository to Gradescope. Part of your score will come from the fact
-that it properly sythesizes. The other part of your score will be based on the completeness of your
-tests, which the TA and I will grade.
-
 ## Deliverables
 
 For this lab, you are expected to build and test both the datapath using the template provided
@@ -394,19 +382,6 @@ operation.
 
 \* `not` is **not** an instruction, it is a _pseudo-op_, which means it can be implemented using other
 operations. Think about how you would implement it using the other operations.
-
-### Architecture Case Study
-
-For the lab this week you are also expected to perform a simple case study. It is meant to show
-how important understanding a computer's architecture is, and the compiler is when developing
-efficient code. For this study, you are to compare and analyze the execution time of the two
-programs given [here](./case_study.tar.gz). You should run a number of experiments varying the input size from 100
-to 30,000. Based on the results you are to write a report of your findings. The report should
-contain a graph of your data and a useful analysis of it. You should draw conclusions based on
-your findings. Reports that simply restate what is in the graph will not get credit. To make it
-clear, make sure you used the concepts you have learned so far in 161 and 161L when
-explaining the differences in performance. If a confusing or fuzzy explanation is given you will
-get low or no marks. The report should be a part of REPORT.md.
 
 ### Producing the Waveform
 
