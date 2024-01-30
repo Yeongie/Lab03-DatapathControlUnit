@@ -10,8 +10,8 @@ There are two control units. The _main control unit_ manages the datapath. It re
 input from the currently executing instructions and based on this opcode it configures the
 datapath accordingly. A truth table for the unit functionality (shown below) can be found in the
 slides of CS161. The table (read vertically) shows the output for `R-format`, `lw`, `sw` and
-`beq` instructions, additionally, you will need to implement the immediate type (`addi`,`subi`)
-instructions. To do this, you will trace through the datapath (shown above) to determine which
+`beq` instructions, additionally, you will need to implement the immediate type `addi`
+instruction. To do this, you will trace through the datapath (shown above) to determine which
 control lines will need to be set.
 
 <table style="border-collapse: collapse; width: 98%; height: 496px;" border="1">
@@ -23,7 +23,7 @@ control lines will need to be set.
             <td style="width: 14.2764%; height: 31px; text-align: center;"><strong>lw</strong></td>
             <td style="width: 14.2749%; height: 31px; text-align: center;"><strong>sw</strong></td>
             <td style="width: 14.2764%; height: 31px; text-align: center;"><strong>beq</strong></td>
-            <td style="width: 14.2749%; height: 31px; text-align: center;"><strong>imm</strong></td>
+            <td style="width: 14.2749%; height: 31px; text-align: center;"><strong>addi</strong></td>
         </tr>
         <tr style="height: 31px;">
             <td style="width: 14.2764%; height: 186px; text-align: center;" rowspan="6"><strong>Inputs</strong></td>
@@ -172,6 +172,14 @@ an idea of the inputs and outputs of the ALU controller.
             <td style="width: 16.6543%; text-align: center; background-color: #c2e0f4;"><strong>Funct field</strong></td>
             <td style="width: 16.6558%; text-align: center; background-color: #c2e0f4;"><strong>Desired ALU action</strong></td>
             <td style="width: 16.6543%; text-align: center; background-color: #c2e0f4;"><strong>ALU select input</strong></td>
+        </tr>
+        <tr>
+            <td style="width: 16.6558%; text-align: right;">addi</td>
+            <td style="width: 16.6543%; text-align: center;"><span style="font-family: 'andale mono', times;">??</span></td>
+            <td style="width: 16.6558%;">Add Immediate</td>
+            <td style="width: 16.6543%; text-align: center;"><span style="font-family: 'andale mono', times;">XXXXXX</span></td>
+            <td style="width: 16.6558%;">add</td>
+            <td style="width: 16.6543%; text-align: center;"><span style="font-family: 'andale mono', times;">0010</span></td>
         </tr>
         <tr>
             <td style="width: 16.6558%; text-align: right;">lw</td>
@@ -363,13 +371,13 @@ an idea of the inputs and outputs of the ALU controller.
 ## Deliverables
 
 For this lab, you are expected to build and test both the datapath using the template provided
-([`controlUnit.v`](./controlUnit.v)) and ALU control ([`aluControlUnit.v`](./aluControlUnit.v)) units. The target processor
-architecture will only support a subset of the MIPS instructions, listed below. You only have to
-offer control for these instructions. Signal values can be found within your textbook (and in the
-images above).
+([`control.v`](./control.v)) and ALU control ([`alu_control.v`](./alu_control.v), from Lab 02) 
+units. The target processor architecture will only support a subset of the MIPS instructions, 
+listed below. You only have to offer control for these instructions. Signal values can be 
+found within your textbook (and in the images above).
 
-- `add`, `addu`, `addi`
-- `sub`, `subu`
+- `add`, `addi`
+- `sub`,
 - `slt`
 - `not`*, `nor`
 - `or`
@@ -377,15 +385,13 @@ images above).
 - `lw`, `sw`
 - `beq`
 
-Notice that for the `addu` it is sufficient to generate the same control signals as the `add`
-operation.
 
 \* `not` is **not** an instruction, it is a _pseudo-op_, which means it can be implemented using other
 operations. Think about how you would implement it using the other operations.
 
 ### Producing the Waveform
 
-Once you've synthesized the code for the test-bench and the `aluControlUnit` and `controlUnit` modules, you can run
+Once you've synthesized the code for the test-bench and the `alu_control` and `control` modules, you can run
 the test-bench simulation script to make sure all the tests pass. This simluation run should
 produce the code to make a waveform. Use techniques you learned in the first lab to produce a
 waveform for this lab and save it as a PNG. 
