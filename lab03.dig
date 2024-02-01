@@ -28,7 +28,7 @@
         </entry>
         <entry>
           <string>CodeFile</string>
-          <file>\workspaces\Lab03-DatapathControlUnit\control.v</file>
+          <file>./control.v</file>
         </entry>
       </elementAttributes>
       <pos x="340" y="100"/>
@@ -128,7 +128,7 @@
         </entry>
         <entry>
           <string>CodeFile</string>
-          <file>\workspaces\Lab03-DatapathControlUnit\alu_control.v</file>
+          <file>./alu_control.v</file>
         </entry>
       </elementAttributes>
       <pos x="840" y="180"/>
@@ -158,7 +158,7 @@
         </entry>
         <entry>
           <string>CodeFile</string>
-          <file>\workspaces\Lab03-DatapathControlUnit\alu.v</file>
+          <file>./alu.v</file>
         </entry>
       </elementAttributes>
       <pos x="1040" y="200"/>
