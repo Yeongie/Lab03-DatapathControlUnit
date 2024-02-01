@@ -285,7 +285,6 @@ To add the test cases to this test bench you need to add the following values to
 |0x8C000020 |0x000000FF |0x0020   |0        |0x011F     |0       |0      |1        |1          |00     |0         |1       |1         |
 |0xAC000064 |0x000000FF |0x0064   |0        |0x0163     |0       |0      |0        |0          |00     |1         |1       |0         |
 |0x10000025 |0x000000FF |0x0025   |0        |0x00DA     |X       |1      |0        |0          |01     |0         |0       |0         |
-|0x20000004 |0xfffffffb |0x0004   |0        |0xffffffff |0       |0      |0        |0          |00     |0         |1       |1         |
 
 Notice that on the line that begins with the `instruction` value `0x20000004`, the `addi` instruction, has `?`. You'll need to replace
 these question marks with the actual values you determined to be necessary to carry out the add instruction in immediate mode.
