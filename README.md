@@ -258,123 +258,52 @@ an idea of the inputs and outputs of the ALU controller.
 
 <center><b>ALU select bits based on ALUop, and Funct field</b></center>
 
-<p>&nbsp;</p>
-<table style="border-collapse: collapse; width: 98%;" border="1">
-    <tbody>
-        <tr>
-            <td style="width: 22.2078%; text-align: center; background-color: #c2e0f4;" colspan="2"><strong>ALUOp</strong></td>
-            <td style="width: 66.6202%; text-align: center; background-color: #c2e0f4;" colspan="6"><strong>Funct field</strong></td>
-            <td style="width: 11.1023%; background-color: #c2e0f4;" rowspan="2"><strong>Operation</strong></td>
-        </tr>
-        <tr>
-            <td style="width: 11.1039%; background-color: #c2e0f4;"><strong>ALUOp1</strong></td>
-            <td style="width: 11.1039%; background-color: #c2e0f4;"><strong>ALUOp2</strong></td>
-            <td style="width: 11.1039%; background-color: #c2e0f4;"><strong>F5</strong></td>
-            <td style="width: 11.1039%; background-color: #c2e0f4;"><strong>F4</strong></td>
-            <td style="width: 11.1023%; background-color: #c2e0f4;"><strong>F3</strong></td>
-            <td style="width: 11.1039%; background-color: #c2e0f4;"><strong>F2</strong></td>
-            <td style="width: 11.1023%; background-color: #c2e0f4;"><strong>F1</strong></td>
-            <td style="width: 11.1039%; background-color: #c2e0f4;"><strong>F0</strong></td>
-        </tr>
-        <tr>
-            <td style="width: 11.1039%; text-align: center;"><span style="font-family: 'andale mono', times;">0</span></td>
-            <td style="width: 11.1039%; text-align: center;"><span style="font-family: 'andale mono', times;">0</span></td>
-            <td style="width: 11.1039%; text-align: center;"><span style="font-family: 'andale mono', times;">X</span></td>
-            <td style="width: 11.1039%; text-align: center;"><span style="font-family: 'andale mono', times;">X</span></td>
-            <td style="width: 11.1023%; text-align: center;"><span style="font-family: 'andale mono', times;">X</span></td>
-            <td style="width: 11.1039%; text-align: center;"><span style="font-family: 'andale mono', times;">X</span></td>
-            <td style="width: 11.1023%; text-align: center;"><span style="font-family: 'andale mono', times;">X</span></td>
-            <td style="width: 11.1039%; text-align: center;"><span style="font-family: 'andale mono', times;">X</span></td>
-            <td style="width: 11.1023%; text-align: center;"><span style="font-family: 'andale mono', times;">0010</span></td>
-        </tr>
-        <tr>
-            <td style="width: 11.1039%; text-align: center;"><span style="font-family: 'andale mono', times;">X</span></td>
-            <td style="width: 11.1039%; text-align: center;"><span style="font-family: 'andale mono', times;">1</span></td>
-            <td style="width: 11.1039%; text-align: center;"><span style="font-family: 'andale mono', times;">X</span></td>
-            <td style="width: 11.1039%; text-align: center;"><span style="font-family: 'andale mono', times;">X</span></td>
-            <td style="width: 11.1023%; text-align: center;"><span style="font-family: 'andale mono', times;">X</span></td>
-            <td style="width: 11.1039%; text-align: center;"><span style="font-family: 'andale mono', times;">X</span></td>
-            <td style="width: 11.1023%; text-align: center;"><span style="font-family: 'andale mono', times;">X</span></td>
-            <td style="width: 11.1039%; text-align: center;"><span style="font-family: 'andale mono', times;">X</span></td>
-            <td style="width: 11.1023%; text-align: center;"><span style="font-family: 'andale mono', times;">0110</span></td>
-        </tr>
-        <tr>
-            <td style="width: 11.1039%; text-align: center;"><span style="font-family: 'andale mono', times;">1</span></td>
-            <td style="width: 11.1039%; text-align: center;"><span style="font-family: 'andale mono', times;">X</span></td>
-            <td style="width: 11.1039%; text-align: center;"><span style="font-family: 'andale mono', times;">X</span></td>
-            <td style="width: 11.1039%; text-align: center;"><span style="font-family: 'andale mono', times;">X</span></td>
-            <td style="width: 11.1023%; text-align: center;"><span style="font-family: 'andale mono', times;">0</span></td>
-            <td style="width: 11.1039%; text-align: center;"><span style="font-family: 'andale mono', times;">0</span></td>
-            <td style="width: 11.1023%; text-align: center;"><span style="font-family: 'andale mono', times;">0</span></td>
-            <td style="width: 11.1039%; text-align: center;"><span style="font-family: 'andale mono', times;">0</span></td>
-            <td style="width: 11.1023%; text-align: center;"><span style="font-family: 'andale mono', times;">0010</span></td>
-        </tr>
-        <tr>
-            <td style="width: 11.1039%; text-align: center;"><span style="font-family: 'andale mono', times;">1</span></td>
-            <td style="width: 11.1039%; text-align: center;"><span style="font-family: 'andale mono', times;">X</span></td>
-            <td style="width: 11.1039%; text-align: center;"><span style="font-family: 'andale mono', times;">X</span></td>
-            <td style="width: 11.1039%; text-align: center;"><span style="font-family: 'andale mono', times;">X</span></td>
-            <td style="width: 11.1023%; text-align: center;"><span style="font-family: 'andale mono', times;">0</span></td>
-            <td style="width: 11.1039%; text-align: center;"><span style="font-family: 'andale mono', times;">0</span></td>
-            <td style="width: 11.1023%; text-align: center;"><span style="font-family: 'andale mono', times;">1</span></td>
-            <td style="width: 11.1039%; text-align: center;"><span style="font-family: 'andale mono', times;">0</span></td>
-            <td style="width: 11.1023%; text-align: center;"><span style="font-family: 'andale mono', times;">0110</span></td>
-        </tr>
-        <tr>
-            <td style="width: 11.1039%; text-align: center;"><span style="font-family: 'andale mono', times;">1</span></td>
-            <td style="width: 11.1039%; text-align: center;"><span style="font-family: 'andale mono', times;">X</span></td>
-            <td style="width: 11.1039%; text-align: center;"><span style="font-family: 'andale mono', times;">X</span></td>
-            <td style="width: 11.1039%; text-align: center;"><span style="font-family: 'andale mono', times;">X</span></td>
-            <td style="width: 11.1023%; text-align: center;"><span style="font-family: 'andale mono', times;">0</span></td>
-            <td style="width: 11.1039%; text-align: center;"><span style="font-family: 'andale mono', times;">1</span></td>
-            <td style="width: 11.1023%; text-align: center;"><span style="font-family: 'andale mono', times;">0</span></td>
-            <td style="width: 11.1039%; text-align: center;"><span style="font-family: 'andale mono', times;">0</span></td>
-            <td style="width: 11.1023%; text-align: center;"><span style="font-family: 'andale mono', times;">0000</span></td>
-        </tr>
-        <tr>
-            <td style="width: 11.1039%; text-align: center;"><span style="font-family: 'andale mono', times;">1</span></td>
-            <td style="width: 11.1039%; text-align: center;"><span style="font-family: 'andale mono', times;">X</span></td>
-            <td style="width: 11.1039%; text-align: center;"><span style="font-family: 'andale mono', times;">X</span></td>
-            <td style="width: 11.1039%; text-align: center;"><span style="font-family: 'andale mono', times;">X</span></td>
-            <td style="width: 11.1023%; text-align: center;"><span style="font-family: 'andale mono', times;">0</span></td>
-            <td style="width: 11.1039%; text-align: center;"><span style="font-family: 'andale mono', times;">1</span></td>
-            <td style="width: 11.1023%; text-align: center;"><span style="font-family: 'andale mono', times;">0</span></td>
-            <td style="width: 11.1039%; text-align: center;"><span style="font-family: 'andale mono', times;">1</span></td>
-            <td style="width: 11.1023%; text-align: center;"><span style="font-family: 'andale mono', times;">0001</span></td>
-        </tr>
-        <tr>
-            <td style="width: 11.1039%; text-align: center;"><span style="font-family: 'andale mono', times;">1</span></td>
-            <td style="width: 11.1039%; text-align: center;"><span style="font-family: 'andale mono', times;">X</span></td>
-            <td style="width: 11.1039%; text-align: center;"><span style="font-family: 'andale mono', times;">X</span></td>
-            <td style="width: 11.1039%; text-align: center;"><span style="font-family: 'andale mono', times;">X</span></td>
-            <td style="width: 11.1023%; text-align: center;"><span style="font-family: 'andale mono', times;">1</span></td>
-            <td style="width: 11.1039%; text-align: center;"><span style="font-family: 'andale mono', times;">0</span></td>
-            <td style="width: 11.1023%; text-align: center;"><span style="font-family: 'andale mono', times;">1</span></td>
-            <td style="width: 11.1039%; text-align: center;"><span style="font-family: 'andale mono', times;">0</span></td>
-            <td style="width: 11.1023%; text-align: center;"><span style="font-family: 'andale mono', times;">0111</span></td>
-        </tr>
-        <tr>
-            <td style="width: 11.1039%; text-align: center;"><span style="font-family: 'andale mono', times;">1</span></td>
-            <td style="width: 11.1039%; text-align: center;"><span style="font-family: 'andale mono', times;">X</span></td>
-            <td style="width: 11.1039%; text-align: center;"><span style="font-family: 'andale mono', times;">X</span></td>
-            <td style="width: 11.1039%; text-align: center;"><span style="font-family: 'andale mono', times;">X</span></td>
-            <td style="width: 11.1023%; text-align: center;"><span style="font-family: 'andale mono', times;">0</span></td>
-            <td style="width: 11.1039%; text-align: center;"><span style="font-family: 'andale mono', times;">1</span></td>
-            <td style="width: 11.1023%; text-align: center;"><span style="font-family: 'andale mono', times;">1</span></td>
-            <td style="width: 11.1039%; text-align: center;"><span style="font-family: 'andale mono', times;">1</span></td>
-            <td style="width: 11.1023%; text-align: center;"><span style="font-family: 'andale mono', times;">1100</span></td>
-        </tr>
-    </tbody>
-</table>
-<center><b>Truth Table for ALU Control</b></center>
+## Test Bench
+
+For this laboratory you will write the test cases for the test bench in both Digital and Verilog ((lab03_tb.v)[./lab03_tb.v]).
+If you open `lab03.dig` in Digital you will find a circuit with the `control` module from this lab and also has `alu_control`
+and `alu` from Lab 02. In order to run the test bench for this lab you'll need to copy `alu_control.v` and `alu.v` from Lab
+02 into the directory of this lab. Next, you'll need to add the tests cases to the Test component in Digital. If you right
+click on the green Test component titled "Lab 03 Test Bench" you will see a text editor with one line that has all the inputs
+and outputs for the tests. When you first open this componenet you should see something like the following:
+
+```
+PC         A          B        zero     result     reg\_dst branch mem\_read mem\_to\_reg alu\_op mem\_write alu\_src reg\_write
+```
+
+To add the test cases to this test bench you need to add the following values to this text editor:
+
+|PC         |A          |B        |zero     |result     |reg_dst |branch |mem_read |mem_to_reg |alu_op |mem_write |alu_src |reg_write |
+|-----------|-----------|---------|---------|-----------|--------|-------|---------|-----------|-------|----------|--------|----------|
+|0x00000024 |0xFFFFFFFF |0x0001   |0        |0x0001     |1       |0      |0        |0          |10     |0         |0       |1         |
+|0x00000025 |0xFFFFFFFF |0x0001   |0        |0xFFFFFFFF |1       |0      |0        |0          |10     |0         |0       |1         |
+|0x00000020 |0xFFFFFFFF |0x0001   |1        |0x0000     |1       |0      |0        |0          |10     |0         |0       |1         |
+|0x00000022 |0xFFFFFFFF |0x0001   |0        |0xFFFFFFFE |1       |0      |0        |0          |10     |0         |0       |1         |
+|0x0000002A |0xFFFFFFFF |0x0001   |0        |0x0001     |1       |0      |0        |0          |10     |0         |0       |1         |
+|0x00000027 |0xFFFFFFFF |0x0001   |1        |0x0000     |1       |0      |0        |0          |10     |0         |0       |1         |
+|0x20000004 |0xfffffffb |0x0004   |0        |0xffffffff |?       |?      |?        |?          |??     |?         |?       |?         |
+|0x8C000020 |0x000000FF |0x0020   |0        |0x011F     |0       |0      |1        |1          |00     |0         |1       |1         |
+|0xAC000064 |0x000000FF |0x0064   |0        |0x0163     |0       |0      |0        |0          |00     |1         |1       |0         |
+|0x10000025 |0x000000FF |0x0025   |0        |0x00DA     |X       |1      |0        |0          |01     |0         |0       |0         |
+|0x20000004 |0xfffffffb |0x0004   |0        |0xffffffff |0       |0      |0        |0          |00     |0         |1       |1         |
+
+Notice that on the line that begins with the `PC` value `0x20000004`, the `addi` instruction, has `?`. You'll need to replace
+these question marks with the actual values you determined to be necessary to carry out the add instruction in immediate mode.
+
+Once you've entrered all the test cases, run them. If you haven't put your code in `control.v` yet, all the tests should fail.
+If you have already implemented it properly, then all will pass. Run the tests, and fix your code until all the tests pass.
+
+Once you have all the tests passing, you'll add the same test cases to lab03_tb.v. Like in the last lab, I give you the first
+and you'll use the `test_case` task to run each test. Add all the test cases with the values above and run your synthesized
+test bench. Once all tests pass here (which they should if they all passed in Digital), you're done.
 
 ## Deliverables
 
 For this lab, you are expected to build and test both the datapath using the template provided
 ([`control.v`](./control.v)) and ALU control ([`alu_control.v`](./alu_control.v), from Lab 02) 
-units. The target processor architecture will only support a subset of the MIPS instructions, 
-listed below. You only have to offer control for these instructions. Signal values can be 
-found within your textbook (and in the images above).
+units. Additionally, you'll have the ALU (['alu.v'](./alu.v)). The target processor architecture 
+will only support a subset of the MIPS instructions,  listed below. You only have to offer 
+control for these instructions. Signal values can be found within your textbook (and in the images above).
 
 - `add`, `addi`
 - `sub`,
@@ -389,21 +318,15 @@ found within your textbook (and in the images above).
 \* `not` is **not** an instruction, it is a _pseudo-op_, which means it can be implemented using other
 operations. Think about how you would implement it using the other operations.
 
-### Producing the Waveform
-
-Once you've synthesized the code for the test-bench and the `alu_control` and `control` modules, you can run
-the test-bench simulation script to make sure all the tests pass. This simluation run should
-produce the code to make a waveform. Use techniques you learned in the first lab to produce a
-waveform for this lab and save it as a PNG. 
-
-You don't need to add a marker this time. Also, I've provided a .gtkw.
-
 ### The Lab Report
 
 Finally, create a file called REPORT.md and use GitHub markdown to write your lab report. This lab
 report will again be short, and comprised of two sections. The first section is a description of 
-each test case. Use this section to discuss what changes you made in your tests from the prelab
-until this final report. The second section should include your waveform. 
+each test case. This description just needs to include which instruction is being tested in each
+test case. The second section should be a description of the difference between the control signals
+output for the instructions `add` and `addi`. Most of the signals are the same, but some are different.
+Describe in a sentence or two for teach different signal, why they are different based on the datapath
+diagram.
 
 ## Submission:
 

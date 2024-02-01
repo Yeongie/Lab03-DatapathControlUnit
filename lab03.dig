@@ -7,12 +7,12 @@
       <elementName>ExternalFile</elementName>
       <elementAttributes>
         <entry>
-          <string>Label</string>
-          <string>control</string>
-        </entry>
-        <entry>
           <string>applicationType</string>
           <appType>IVERILOG</appType>
+        </entry>
+        <entry>
+          <string>Label</string>
+          <string>control</string>
         </entry>
         <entry>
           <string>externalInputs</string>
@@ -28,7 +28,7 @@
         </entry>
         <entry>
           <string>CodeFile</string>
-          <file>/workspaces/Lab03-DatapathControlUnit/control.v</file>
+          <file>\workspaces\Lab03-DatapathControlUnit\control.v</file>
         </entry>
       </elementAttributes>
       <pos x="340" y="100"/>
@@ -107,12 +107,12 @@
       <elementName>ExternalFile</elementName>
       <elementAttributes>
         <entry>
-          <string>Label</string>
-          <string>alu_control</string>
-        </entry>
-        <entry>
           <string>applicationType</string>
           <appType>IVERILOG</appType>
+        </entry>
+        <entry>
+          <string>Label</string>
+          <string>alu_control</string>
         </entry>
         <entry>
           <string>externalInputs</string>
@@ -128,7 +128,7 @@
         </entry>
         <entry>
           <string>CodeFile</string>
-          <file>/workspaces/Lab03-DatapathControlUnit/alu_control.v</file>
+          <file>\workspaces\Lab03-DatapathControlUnit\alu_control.v</file>
         </entry>
       </elementAttributes>
       <pos x="840" y="180"/>
@@ -137,12 +137,12 @@
       <elementName>ExternalFile</elementName>
       <elementAttributes>
         <entry>
-          <string>Label</string>
-          <string>alu</string>
-        </entry>
-        <entry>
           <string>applicationType</string>
           <appType>IVERILOG</appType>
+        </entry>
+        <entry>
+          <string>Label</string>
+          <string>alu</string>
         </entry>
         <entry>
           <string>externalInputs</string>
@@ -158,19 +158,28 @@
         </entry>
         <entry>
           <string>CodeFile</string>
-          <file>/workspaces/Lab03-DatapathControlUnit/alu.v</file>
+          <file>\workspaces\Lab03-DatapathControlUnit\alu.v</file>
         </entry>
       </elementAttributes>
       <pos x="1040" y="200"/>
     </visualElement>
     <visualElement>
       <elementName>Out</elementName>
-      <elementAttributes/>
+      <elementAttributes>
+        <entry>
+          <string>Label</string>
+          <string>zero</string>
+        </entry>
+      </elementAttributes>
       <pos x="1240" y="200"/>
     </visualElement>
     <visualElement>
       <elementName>Out</elementName>
       <elementAttributes>
+        <entry>
+          <string>Label</string>
+          <string>result</string>
+        </entry>
         <entry>
           <string>Bits</string>
           <int>32</int>
@@ -254,6 +263,47 @@
       </elementAttributes>
       <pos x="200" y="380"/>
     </visualElement>
+    <visualElement>
+      <elementName>Testcase</elementName>
+      <elementAttributes>
+        <entry>
+          <string>Label</string>
+          <string>Lab 03 Test Bench</string>
+        </entry>
+        <entry>
+          <string>Testdata</string>
+          <testData>
+            <dataString>PC         A          B        zero     result     reg\_dst branch mem\_read mem\_to\_reg alu\_op mem\_write alu\_src reg\_write
+0x00000024 0xFFFFFFFF 0x0001   0        0x0001     1        0      0         0            10      0          0        1
+0x00000025 0xFFFFFFFF 0x0001   0        0xFFFFFFFF 1        0      0         0            10      0          0        1
+0x00000020 0xFFFFFFFF 0x0001   1        0x0000     1        0      0         0            10      0          0        1
+0x00000022 0xFFFFFFFF 0x0001   0        0xFFFFFFFE 1        0      0         0            10      0          0        1
+0x0000002A 0xFFFFFFFF 0x0001   0        0x0001     1        0      0         0            10      0          0        1
+0x00000027 0xFFFFFFFF 0x0001   1        0x0000     1        0      0         0            10      0          0        1
+0x20000004 0xfffffffb 0x0004   0        0xffffffff 0        0      0         0            00      0          1        1
+0x8C000020 0x000000FF 0x0020   0        0x011F     0        0      1         1            00      0          1        1
+0xAC000064 0x000000FF 0x0064   0        0x0163     0        0      0         0            00      1          1        0
+0x10000025 0x000000FF 0x0025   0        0x00DA     X        1      0         0            01      0          0        0
+0x20000004 0xfffffffb 0x0004   0        0xffffffff 0        0      0         0            00      0          1        1</dataString>
+          </testData>
+        </entry>
+      </elementAttributes>
+      <pos x="880" y="-20"/>
+    </visualElement>
+    <visualElement>
+      <elementName>Out</elementName>
+      <elementAttributes>
+        <entry>
+          <string>Label</string>
+          <string>alu\_op</string>
+        </entry>
+        <entry>
+          <string>Bits</string>
+          <int>2</int>
+        </entry>
+      </elementAttributes>
+      <pos x="820" y="120"/>
+    </visualElement>
   </visualElements>
   <wires>
     <wire>
@@ -314,6 +364,10 @@
     </wire>
     <wire>
       <p1 x="500" y="180"/>
+      <p2 x="820" y="180"/>
+    </wire>
+    <wire>
+      <p1 x="820" y="180"/>
       <p2 x="840" y="180"/>
     </wire>
     <wire>
@@ -375,6 +429,10 @@
     <wire>
       <p1 x="820" y="220"/>
       <p2 x="820" y="260"/>
+    </wire>
+    <wire>
+      <p1 x="820" y="120"/>
+      <p2 x="820" y="180"/>
     </wire>
     <wire>
       <p1 x="520" y="240"/>
