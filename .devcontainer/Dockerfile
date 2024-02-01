@@ -9,5 +9,6 @@ RUN wget https://github.com/hneemann/Digital/releases/latest/download/Digital.zi
 RUN unzip Digital.zip
 RUN mv Digital /usr/local/Digital
 COPY Digital.sh /usr/local/Digital
+RUN chmod a+x /usr/local/Digital/Digital.sh
 
 COPY menu /root/.fluxbox/menu
