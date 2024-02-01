@@ -18,7 +18,7 @@
 module datapath_tb;
     // Inputs
     reg clk; 
-    reg [31:0] PC;
+    reg [31:0] instruction;
     reg [31:0] A;
     reg [31:0] B;
 
@@ -49,7 +49,7 @@ module datapath_tb;
     // --------------------------------------------------- 
     
     control control_uut (
-        .instr_op(PC[31:26]),
+        .instr_op(instruction[31:26]),
         .reg_dst(reg_dst),
         .branch(branch),
         .mem_read(mem_read),
@@ -62,7 +62,7 @@ module datapath_tb;
 
     alu_control alu_control_uut (
         .alu_op(alu_op),
-        .funct(PC[5:0]),
+        .funct(instruction[5:0]),
         .alu_control(alu_ctrl)
     );
 
@@ -86,7 +86,7 @@ module datapath_tb;
     end
 
     task test_case(
-        input [31:0] PC_val,
+        input [31:0] instruction_val,
         input [31:0] A_val,
         input [31:0] B_val,
         input        zero_val,
@@ -98,16 +98,29 @@ module datapath_tb;
         input [1:0]  alu_op_val,
         input        mem_write_val,
         input        alu_src_val,
-        input        reg_write);
+        input        reg_write_val);
         begin
             totalTests = totalTests + 1;
-            PC = PC_val;
+            instruction = instruction_val;
             A = A_val;
             B = B_val;
 
             #100; // Wait 
-            if (result_val !== result || zero_val !== zero) begin
-                $write("failed\n");
+            if (result_val     !== result       || 
+                zero_val       !== zero         || 
+                reg_dst_val    !== reg_dst      || 
+                branch_val     !== branch       || 
+                mem_read_val   !== mem_read_val || 
+                mem_to_reg_val !== mem_to_reg   || 
+                alu_op_val     !== alu_op       || 
+                mem_write_val  !== mem_write    || 
+                alu_src_val    !== alu_src      || 
+                reg_write_val  !== reg_write) 
+            begin
+                $write("\nfailed - expected: zero = %b, result = %h, reg_dst = %b, branch = %b, mem_read = %b, mem_to_reg = %b, alu_op = %b, mem_write = %b, alu_src = %b, reg_write = %b", 
+                       zero_val, result_val, reg_dst_val, branch_val, mem_read_val, mem_to_reg_val, alu_op_val, mem_write_val, alu_src_val, reg_write_val);
+                $write("\n       - actual  : zero = %b, result = %h, reg_dst = %b, branch = %b, mem_read = %b, mem_to_reg = %b, alu_op = %b, mem_write = %b, alu_src = %b, reg_write = %b\n", 
+                       zero, result, reg_dst, branch, mem_read, mem_to_reg, alu_op, mem_write, alu_src, reg_write);
                 failedTests = failedTests + 1;
             end else begin
                 $write("passed\n");
