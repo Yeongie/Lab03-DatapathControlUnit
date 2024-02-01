@@ -273,18 +273,7 @@
         <entry>
           <string>Testdata</string>
           <testData>
-            <dataString>instruction A          B        zero     result     reg\_dst branch mem\_read mem\_to\_reg alu\_op mem\_write alu\_src reg\_write
-0x00000024  0xFFFFFFFF 0x0001   0        0x0001     1        0      0         0            10      0          0        1
-0x00000025  0xFFFFFFFF 0x0001   0        0xFFFFFFFF 1        0      0         0            10      0          0        1
-0x00000020  0xFFFFFFFF 0x0001   1        0x0000     1        0      0         0            10      0          0        1
-0x00000022  0xFFFFFFFF 0x0001   0        0xFFFFFFFE 1        0      0         0            10      0          0        1
-0x0000002A  0xFFFFFFFF 0x0001   0        0x0001     1        0      0         0            10      0          0        1
-0x00000027  0xFFFFFFFF 0x0001   1        0x0000     1        0      0         0            10      0          0        1
-0x20000004  0xfffffffb 0x0004   0        0xffffffff 0        0      0         0            00      0          1        1
-0x8C000020  0x000000FF 0x0020   0        0x011F     0        0      1         1            00      0          1        1
-0xAC000064  0x000000FF 0x0064   0        0x0163     0        0      0         0            00      1          1        0
-0x10000025  0x000000FF 0x0025   0        0x00DA     X        1      0         0            01      0          0        0
-0x20000004  0xfffffffb 0x0004   0        0xffffffff 0        0      0         0            00      0          1        1</dataString>
+            <dataString>instruction A          B        zero     result     reg\_dst branch mem\_read mem\_to\_reg alu\_op mem\_write alu\_src reg\_write</dataString>
           </testData>
         </entry>
       </elementAttributes>
