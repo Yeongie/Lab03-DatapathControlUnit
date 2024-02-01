@@ -110,7 +110,7 @@ module datapath_tb;
                 zero_val       !== zero         || 
                 reg_dst_val    !== reg_dst      || 
                 branch_val     !== branch       || 
-                mem_read_val   !== mem_read_val || 
+                mem_read_val   !== mem_read     || 
                 mem_to_reg_val !== mem_to_reg   || 
                 alu_op_val     !== alu_op       || 
                 mem_write_val  !== mem_write    || 
