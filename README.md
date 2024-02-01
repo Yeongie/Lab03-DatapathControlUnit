@@ -268,12 +268,12 @@ click on the green Test component titled "Lab 03 Test Bench" you will see a text
 and outputs for the tests. When you first open this componenet you should see something like the following:
 
 ```
-PC         A          B        zero     result     reg\_dst branch mem\_read mem\_to\_reg alu\_op mem\_write alu\_src reg\_write
+Instruction A          B        zero     result     reg\_dst branch mem\_read mem\_to\_reg alu\_op mem\_write alu\_src reg\_write
 ```
 
 To add the test cases to this test bench you need to add the following values to this text editor:
 
-|PC         |A          |B        |zero     |result     |reg_dst |branch |mem_read |mem_to_reg |alu_op |mem_write |alu_src |reg_write |
+|instruction|A          |B        |zero     |result     |reg_dst |branch |mem_read |mem_to_reg |alu_op |mem_write |alu_src |reg_write |
 |-----------|-----------|---------|---------|-----------|--------|-------|---------|-----------|-------|----------|--------|----------|
 |0x00000024 |0xFFFFFFFF |0x0001   |0        |0x0001     |1       |0      |0        |0          |10     |0         |0       |1         |
 |0x00000025 |0xFFFFFFFF |0x0001   |0        |0xFFFFFFFF |1       |0      |0        |0          |10     |0         |0       |1         |
@@ -287,7 +287,7 @@ To add the test cases to this test bench you need to add the following values to
 |0x10000025 |0x000000FF |0x0025   |0        |0x00DA     |X       |1      |0        |0          |01     |0         |0       |0         |
 |0x20000004 |0xfffffffb |0x0004   |0        |0xffffffff |0       |0      |0        |0          |00     |0         |1       |1         |
 
-Notice that on the line that begins with the `PC` value `0x20000004`, the `addi` instruction, has `?`. You'll need to replace
+Notice that on the line that begins with the `instruction` value `0x20000004`, the `addi` instruction, has `?`. You'll need to replace
 these question marks with the actual values you determined to be necessary to carry out the add instruction in immediate mode.
 
 Once you've entrered all the test cases, run them. If you haven't put your code in `control.v` yet, all the tests should fail.
