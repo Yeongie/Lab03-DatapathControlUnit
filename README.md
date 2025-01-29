@@ -307,15 +307,11 @@ control for these instructions. Signal values can be found within your textbook 
 - `add`, `addi`
 - `sub`,
 - `slt`
-- `not`*, `nor`
+- `nor`
 - `or`
 - `and`
 - `lw`, `sw`
 - `beq`
-
-
-\* `not` is **not** an instruction, it is a _pseudo-op_, which means it can be implemented using other
-operations. Think about how you would implement it using the other operations.
 
 ### The Lab Report
 
