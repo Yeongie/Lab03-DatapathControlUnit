@@ -299,8 +299,8 @@ test bench. Once all tests pass here (which they should if they all passed in Di
 ## Deliverables
 
 For this lab, you are expected to build and test both the datapath using the template provided
-([`control.v`](./control.v)) and ALU control ([`alu_control.v`](./alu_control.v), from Lab 02) 
-units. Additionally, you'll have the ALU (['alu.v'](./alu.v)). The target processor architecture 
+([`control.v`](./control.v)) and ALU control (`alu_control.v` from Lab 02) 
+units. Additionally, you'll have the ALU ('alu.v' also from Lab 02). The target processor architecture 
 will only support a subset of the MIPS instructions,  listed below. You only have to offer 
 control for these instructions. Signal values can be found within your textbook (and in the images above).
 
