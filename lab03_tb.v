@@ -1,11 +1,11 @@
 //=========================================================================
 // Name & Email must be EXACTLY as in Gradescope roster!
-// Name: 
-// Email: 
+// Name: Isaac Lee  
+// Email: ilee002@ucr.edu
 // 
-// Assignment name: 
-// Lab section: 
-// TA: 
+// Assignment name: Lab03-DatapathControlUnit
+// Lab section: 21
+// TA: Sakshar Chakravarty
 // 
 // I hereby certify that I have not received assistance on this assignment,
 // or used code, from ANY outside source other than the instruction team
@@ -138,8 +138,48 @@ module datapath_tb;
         #10; // Wait 
 
         // -------------------------------------------------------
-        // More Control Unit tests jere
+        // Control-unit tests
         // -------------------------------------------------------
+
+        // R-type AND
+        test_case(32'h00000024, 32'hFFFFFFFF, 32'h00000001,
+                  1'b0, 32'h00000001, 1'b1, 1'b0, 1'b0, 1'b0, 2'b10, 1'b0, 1'b0, 1'b1);
+
+        // R-type AND zero
+        test_case(32'h00000025, 32'hFFFFFFFF, 32'h00000001,
+                  1'b0, 32'hFFFFFFFF, 1'b1, 1'b0, 1'b0, 1'b0, 2'b10, 1'b0, 1'b0, 1'b1);
+
+        // R-type ADD
+        test_case(32'h00000020, 32'hFFFFFFFF, 32'h00000001,
+                  1'b1, 32'h00000000, 1'b1, 1'b0, 1'b0, 1'b0, 2'b10, 1'b0, 1'b0, 1'b1);
+
+        // R-type SUB
+        test_case(32'h00000022, 32'hFFFFFFFF, 32'h00000001,
+                  1'b0, 32'hFFFFFFFE, 1'b1, 1'b0, 1'b0, 1'b0, 2'b10, 1'b0, 1'b0, 1'b1);
+
+        // R-type SLT (equal)
+        test_case(32'h0000002A, 32'hFFFFFFFF, 32'h00000001,
+                  1'b0, 32'h00000001, 1'b1, 1'b0, 1'b0, 1'b0, 2'b10, 1'b0, 1'b0, 1'b1);
+
+        // R-type NOR
+        test_case(32'h00000027, 32'h0000FFFF, 32'hFFFF0000,
+                  1'b1, 32'h00000000, 1'b1, 1'b0, 1'b0, 1'b0, 2'b10, 1'b0, 1'b0, 1'b1);
+
+        // addi
+        test_case(32'h20000004, 32'hFFFFFFFB, 32'h00000004,
+                  1'b0, 32'hFFFFFFFF, 1'b0, 1'b0, 1'b0, 1'b0, 2'b00, 1'b0, 1'b1, 1'b1);
+
+        // lw
+        test_case(32'h8C000020, 32'h000000FF, 32'h00000020,
+                  1'b0, 32'h0000011F, 1'b0, 1'b0, 1'b1, 1'b1, 2'b00, 1'b0, 1'b1, 1'b1);
+
+        // sw
+        test_case(32'hAC000064, 32'h000000FF, 32'h00000064,
+                  1'b0, 32'h00000163, 1'b0, 1'b0, 1'b0, 1'b0, 2'b00, 1'b1, 1'b1, 1'b0);
+
+        // beq
+        test_case(32'h10000025, 32'h000000FF, 32'h00000025,
+                  1'b0, 32'h000000DA, 1'b0, 1'b1, 1'b0, 1'b0, 2'b01, 1'b0, 1'b0, 1'b0);
 
         // -------------------------------------------------------
         // Test group 2: ALU Control Unit
@@ -150,6 +190,25 @@ module datapath_tb;
         // -------------------------------------------------------
         // More ALU Control Unit tests jere
         // -------------------------------------------------------
+ // R-type OR  (funct=0x25)
+        test_case(32'h00000025, 32'h00000011, 32'h0000FF00,
+                  1'b0, 32'h0000FF11, 1'b1, 1'b0, 1'b0, 1'b0, 2'b10, 1'b0, 1'b0, 1'b1);
+
+        // R-type ADD (funct=0x20)
+        test_case(32'h00000020, 32'h00000001, 32'h00000002,
+                  1'b0, 32'h00000003, 1'b1, 1'b0, 1'b0, 1'b0, 2'b10, 1'b0, 1'b0, 1'b1);
+
+        // R-type SUB (funct=0x22)
+        test_case(32'h00000022, 32'h00000005, 32'h00000003,
+                  1'b0, 32'h00000002, 1'b1, 1'b0, 1'b0, 1'b0, 2'b10, 1'b0, 1'b0, 1'b1);
+
+        // R-type SLT (funct=0x2A)
+        test_case(32'h0000002A, 32'h00000002, 32'h00000005,
+                  1'b0, 32'h00000001, 1'b1, 1'b0, 1'b0, 1'b0, 2'b10, 1'b0, 1'b0, 1'b1);
+
+        // R-type NOR (funct=0x27)
+        test_case(32'h00000027, 32'hAAAA5555, 32'h12345678,
+                  1'b0, ~(32'hAAAA5555 | 32'h12345678), 1'b1, 1'b0, 1'b0, 1'b0, 2'b10, 1'b0, 1'b0, 1'b1);
 
         // --------------------------------------------------------------
         // End testing
